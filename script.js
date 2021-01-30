@@ -10,7 +10,6 @@ function handleClassChange(ticket, isIncrease) {
     }
     ticketInput.value = ticketNewCount;
 
-
     let ticketTotal = 0;
     if (ticket == 'first') {
         ticketTotal = ticketNewCount * 150;
@@ -44,3 +43,8 @@ function getInputValue(ticket) {
     const ticketCount = parseInt(ticketInput.value);
     return ticketCount;
 }
+
+document.getElementById('booking').addEventListener('click', function () {
+    document.getElementById('ticket-details').style.display = "none";
+    document.getElementById('booking-details').style.display = "block";
+})
